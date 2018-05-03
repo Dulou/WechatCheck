@@ -1,0 +1,15 @@
+/* login.wxss */
+.section{
+  height: 25px;
+  width: 50%;
+  background-color: #F2F2F2;
+  margin: 10px;
+  padding: 10px;
+  text-align: left
+}
+.btn{
+  width: 25%;
+  height: 45px;
+  margin: 10px;
+  text-align: center;
+}

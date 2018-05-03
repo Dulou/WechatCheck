@@ -1,0 +1,44 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/index/search",
+    "pages/login/login",
+    "pages/test/test",
+    "pages/staticsshow/staticsshow",
+    "pages/history/analyze"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "公众号文风识别",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "black",
+    "selectedColor": "black",
+    "backgroundColor": "light",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/history/analyze",
+        "text": "历史数据分析"
+      },
+      {
+        "pagePath": "pages/staticsshow/staticsshow",
+        "text": "静态展示"
+      },
+      {
+        "pagePath": "pages/test/test",
+        "text": "测试页面"
+      },
+      {
+        "pagePath": "pages/login/login",
+        "text": "登录"
+      }
+    ]
+  }
+}

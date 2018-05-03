@@ -1,0 +1,10 @@
+<!--login.wxml-->
+<view class="container">
+  <view class="section">
+    <input id="username" type="text" placeholder="请输入用户名" maxlength="10" bindinput="bindUserName" focus="true"/>
+  </view>
+  <view class="section">
+    <input id="password" type="password" placeholder="请输入密码" bindinput="bindPassWord" focus="false"/>
+  </view>
+  <button type="button" class="btn" bindtap="loginBtn">登录</button>
+</view>
