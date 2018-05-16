@@ -1,11 +1,13 @@
 // pages/test/test.js
+var inputurl = [];
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-  
+  article : '',
+  response :''
   },
 
   /**
@@ -63,40 +65,46 @@ Page({
   onShareAppMessage: function () {
   
   },
-  data: {
-    text: 'init data',
-    num: 0,
-    array: [{ text: 'init data' }],
-    object: {
-      text: 'init data'
-    }
-  },
+  
   changeText: function () {
     // this.data.text = 'changed data'  // bad, it can not work
     this.setData({
       text: 'changed data'
     })
   },
-  changeNum: function () {
-    this.data.num = 1
+  URLInput: function(e){
     this.setData({
-      num: this.data.num
+      article: 'article=' + e.detail.value
     })
+
   },
-  changeItemInArray: function () {
-    // you can use this way to modify a danamic data path
-    this.setData({
-      'array[0].text': 'changed data'
-    })
-  },
-  changeItemInObject: function () {
-    this.setData({
-      'object.text': 'changed data'
-    });
-  },
-  addNewField: function () {
-    this.setData({
-      'newField.text': 'new data'
-    })
-  }
+  
+  upload: function () {
+
+    var that = this;
+    wx.request({
+      url: 'http://140.143.250.75/post', 
+      data: that.data.article,
+      header: {
+         'content-type': 'application/x-www-form-urlencoded'
+          },
+      method: 'POST',
+      success: function (res) {
+        console.log('submit success');
+        console.log(res.data);
+        that.setData({
+          response: res.data
+        })
+      },
+      fail: function (res) {
+        console.log('submit fail');
+      },
+      complete: function (res) {
+        console.log('submit complete');
+      }  
+      
+      })
+      }
+  
+
 })

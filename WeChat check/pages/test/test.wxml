@@ -1,12 +1,9 @@
 <!--pages/test/test.wxml-->
+<view class="itemView">公众号文章URL：
+    <input class="input" name="URL " placeholder="请输入文章URL"
+    bindinput ="URLInput"/>
+  </view>
+<button bindtap="upload">上传文件</button>
 
-<view>{{text}}</view>
-<button bindtap="changeText"> Change normal data </button>
-<view>{{num}}</view>
-<button bindtap="changeNum"> Change normal num </button>
-<view>{{array[0].text}}</view>
-<button bindtap="changeItemInArray"> Change Array data </button>
-<view>{{object.text}}</view>
-<button bindtap="changeItemInObject"> Change Object data </button>
-<view>{{newField.text}}</view>
-<button bindtap="addNewField"> Add new data </button>
+<view class="returndata"> 文章分析结果:</view>
+<view>{{ message }}</view>

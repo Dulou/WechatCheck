@@ -15,7 +15,7 @@ Page({
     });
   },
   loginBtn: function () {
-    if (this.data.username == "goach" && this.data.password == "123456") {
+    if (this.data.username == "jason" && this.data.password == "123456") {
       wx.switchTab({
         url: '../index/index',
       })
